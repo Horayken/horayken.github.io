@@ -1,0 +1,60 @@
+body {
+    font-family: ThePrestigeSignature ;
+    src:url(../res/prestige.otf) format("opentype");
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/losSoprano.png");
+    background-repeat: no-repeat;
+    background-position: inherit;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 3vw;
+   }
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #c7c9c6;
+}
+nav {
+    text-align: center;
+    padding: 25px;
+    background-color: #272633;
+    color: white;
+
+
+}
+section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-item {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+.menu-item:hover {
+    color: #333;
+    background-color: #c7c9c6;
+}
+footer {
+            background-color: #272633;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .icon {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .icon img {
+            width: 50px;
+            height: 50px;
+        }
