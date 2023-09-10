@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesForms.css">
+    <title>Formulario de Reserva</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva tu mesa</h1>
+        <form action="procesar_reserva.php" method="POST">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required style="width: 575px; height: 10px;">
+            <br/>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required style="width: 575px; height: 10px;">
+            <br>
+            <small>Format: 123-45-678</small><br><br>
+            <br/>
+            <label for="fecha">Fecha de reserva:</label>
+            <input type="date" id="fecha" name="fecha" required style="width: 575px; height: 10px;">
+            <br/>
+            <label for="hora">Hora de reserva:</label>
+            <input type="time" id="hora" name="hora" required style="width: 575px; height: 10px;">
+            <br/>
+
+
+
+            <br/>
+            <label for="nombre">Tipo de Ocacion:</label>
+            <input type="text" id="nombre" name="nombre" required style="width: 575px; height: 10px;">
+            <br/>
+            
+            
+
+
+            <br>
+            <label for="nombre">Preferencia de Ubicacion</label>
+            <select name="Ubicacion" id="Ubi" style="width: 595px; height: 30px;">
+                 <br>
+                <option value="Terraza">Terraza</option>
+                 <br>
+                <option value="Interior">Interior</option>
+                 <br>
+                <option value="Bar">Bar</option>
+                 <br>
+             </select>
+             <br>
+
+
+
+
+
+
+
+
+
+
+
+
+            <br>
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required style="width: 575px; height: 10px;">
+            <br/>
+            <label for="comentarios">Comentarios o solicitudes especiales:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="60" style="width: 575px; height: 47px;"></textarea>
+            <br/>
+
+
+
+
+
+
+
+
+
+
+
+            <label for="telefono">Codigo de Descuento:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{5}" required style="width: 575px; height: 10px;">
+            <br/>
+            <small>Format: 12345</small><br>
+            <br/>
+
+
+
+
+
+
+
+            <button type="submit" onclick="agradecer()">Enviar Reserva</button>
+            <script>
+                    function agradecer() {
+                    alert('¡Gracias por la reserva!');
+                     }
+            </script>
+            <!--<button type="submit">Enviar reserva</button>-->
+        </form>
+    </div>
+</body>
+</html>
