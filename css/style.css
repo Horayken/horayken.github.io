@@ -1,19 +1,31 @@
+html{
+    height: 100%;
+}
+
 body {
-    font-family: 'Prestige', sans-serif;
+    font-family: 'Olivia', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-image: url("../img/losSoprano.png");
     background-repeat: no-repeat;
     background-position: inherit;
     background-attachment: fixed;
     background-size: cover;
-    font-size: 3vw;
+    font-size: 14px;
+    color: #c7c9c6;
+    flex: 1 0 auto;
+
    }
 
 header {
     text-align: center;
     padding: 10px;
     background-color: #c7c9c6;
+    font-size: 14px;
+    flex: 0 0 auto;
 }
 nav {
     text-align: center;
@@ -24,6 +36,7 @@ nav {
 
 }
 section {
+    font-size: 35px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -38,22 +51,44 @@ section {
 }
 .menu-item:hover {
     color: #333;
-    background-color: #c7c9c6;
+    background-color: hwb(0 73% 27% / 0.212);
 }
 footer {
-            background-color: #272633;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .icon {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        .icon img {
-            width: 50px;
-            height: 50px;
-        }
+    background-color: #272633;
+    color: hwb(0 93% 7%);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: Left;
+}
+
+.icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.contact-info {
+    text-align: right;
+    margin: 0 30px;
+}
+
+.subscribe-form {
+    display: inline-block;
+}
+
+.copyright {
+    text-align: center;
+    margin: 0 20px;
+}
