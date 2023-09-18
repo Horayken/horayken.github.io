@@ -11,216 +11,230 @@
     <title>Carta de Restaurante</title>
   </head>
   <body id="body"> <nav>
-      <div class="menu-item" onclick="showMenu('entradas')">Entradas</div>
-      <div class="menu-item" onclick="showMenu('platos-principales')">Platos Principales</div>
-      <div class="menu-item" onclick="showMenu('postres')">Postres</div>
-      <div class="menu-item" onclick="showMenu('Bebidas y aperitivos')">Bebidas y Aperitivos</div>
-      <div class="menu-item" onclick="showMenu('Vinos')">Vinos</div>
-    </nav>
-    <section id="menu"></section>
-    <div class="menuPrincipal"></div>
-    <script>
-      function showMenu(category) {
-        const menuSection = document.getElementById('menu');
-        let menuContent = '';
-        document.getElementById('body').style.backgroundImage = "url('img/fondoMenu.jpg')";
-        if (category === 'entradas') {
-          menuContent = `
-                        
-							<h3>Entradas</h3>
-							<ul>
-								<li>
-									<h3>"Fusilli al Capone"</h3>
-									<p>Fusilli cocidos al dente acompañados de una salsa de tomate picante, salchichas italianas y albóndigas sazonadas con hierbas frescas. Este plato rinde homenaje a la audacia y el sabor fuerte de Al Capone.</p>
-								</li>
-								<li>
-									<h3>"Rigatoni Gambino"</h3>
-									<p>Rigatoni al dente cubiertos con una cremosa y suave salsa de vodka, camarones salteados y un toque de pimienta roja. Este plato es un tributo a la elegancia y el poder de la familia Gambino.</p>
-								</li>
-								<li>
-									<h3>"Cannoli Corleone"</h3>
-									<p>Deliciosos cannolis rellenos con una crema dulce de pistacho y trocitos de chocolate oscuro. Este postre hace honor a la sofisticación y la riqueza de la familia Corleone.</p>
-								</li>
-								<li>
-									<h3>"Provolone Padrino"</h3>
-									<p>Una tabla de queso provolone derretido y gratinado, acompañado de crostini de ajo y tomates secados al sol. Un inicio audaz inspirado en el poder del padrino.</p>
-								</li>
-								<li>
-									<h3>"Antipasto Amici"</h3>
-									<p>Una selección de embutidos italianos, quesos, aceitunas y vegetales encurtidos, servidos con pan de focaccia. Una entrada compartida en honor a los amigos y socios de la mafia.</p>
-								</li>
-								<li>
-									<h3>"Insalata Mafiosa"</h3>
-									<p>Ensalada fresca con lechuga crujiente, tomates cherry, mozzarella y aceitunas negras, aliñada con vinagreta de hierbas. Una opción saludable que mantiene un perfil misterioso.</p>
-								</li>
-							</ul>
-                    `;
-        } else if (category === 'platos-principales') {
-          menuContent = `
-                        
-							<h2>Platos Principales</h2>
-							<ul>
-								<li>
-									<h3>"Espagueti Luciano"</h3>
-									<p>Espaguetis al dente servidos con una rica y fragante salsa marinara, hecha con tomates frescos y hierbas de la región italiana. Este plato refleja la tradición y el encanto de Lucky Luciano.</p>
-								</li>
-								<li>
-									<h3>"Gnocchi Omertà"</h3>
-									<p>Gnocchi suaves y tiernos bañados en una exquisita salsa de crema de trufa y champiñones. El nombre hace alusión al código de silencio de la mafia y a la elegancia de este plato.</p>
-								</li>
-								<li>
-									<h3>"Lasagna La Cosa Nostra"</h3>
-									<p> Una lasaña deliciosa con capas alternadas de carne molida sazonada, ricotta cremosa, espinacas frescas y láminas de pasta al huevo. Este plato representa la fortaleza y la unión de la Cosa Nostra.</p>
-								</li>
-								<li>
-									<h3>"Pizza Don Vito"</h3>
-									<p>Una pizza clásica con base de masa crujiente, cubierta generosamente con pepperoni picante, aceitunas negras y hojas frescas de albahaca. Esta pizza celebra el legado de Don Vito Corleone.</p>
-								</li>
-								<li>
-									<h3>"Pappardelle Godfather"</h3>
-									<p>Pappardelle anchos y tiernos servidos con una ragú de cordero lentamente cocido en vino tinto y hierbas aromáticas. Un tributo a la película "El Padrino".</p>
-								</li>
-								<li>
-									<h3>"Cotoletta Capo"</h3>
-									<p>Una jugosa cotoletta de ternera empanada y frita, acompañada de papas gajo y espinacas salteadas. Una elección audaz que rinde homenaje a los líderes de la mafia.</p>
-								</li>
-								<li>
-									<h3>"Risotto Venganza"</h3>
-									<p>Risotto cremoso de azafrán con camarones, calamares y mejillones en una salsa de mariscos. Un plato lujoso que evoca la búsqueda de venganza en el mundo de la mafia.</p>
-								</li>
-							</ul>              `;
-        } else if (category === 'postres') {
-          menuContent = `
-                        
-							<h2>Postres</h2>
-							<ul>
-								<li>
-									<h3>"Tiramisú Traficante"</h3>
-									<p>Un tiramisú indulgente impregnado de café fuerte y un toque de licor, cubierto con una capa de cacao en polvo. Este postre evoca la intensidad y la pasión de los traficantes de la mafia.</p>
-								</li>
-								<li>
-									<h3>"Cannoli Traición"</h3>
-									<p>Cannoli rellenos con una mezcla de crema de ricotta, chocolate blanco y pistachos, acompañados de un coulis de frambuesa. Un postre que refleja los giros inesperados en la vida de la mafia.</p>
-								</li>
-								<li>
-									<h3>"Affogato Vendetta"</h3>
-									<p>Helado de vainilla cubierto con un shot de espresso caliente y amaretto, coronado con virutas de chocolate oscuro. Un postre con un toque de determinación y desafío.</p>
-								</li>
-								<li>
-									<h3>"Zeppole Sospecha"</h3>
-									<p>Zeppole de masa frita espolvoreados con azúcar glasé, servidos con tres salsas misteriosas: chocolate, caramelo y frambuesa. Un postre que invita a la especulación y a la sorpresa.</p>
-								</li>
-							</ul>
-                    `;
-        } else if (category === 'Bebidas y aperitivos') {
-          menuContent = `                       
-						
-							<h2>Bebidas:</h2>
-							<ul>
-								<li>
-									<h3>"Beso de Limoncello"</h3>
-									<p>Un cóctel refrescante y cítrico que combina el sabor brillante del limoncello con un toque de menta fresca.</p>
-									<p>Ingredientes: Limoncello, jugo de limón fresco, hojas de menta, soda.</p>
-								</li>
-								<li>
-									<h3>"Martini al Al Capone"</h3>
-									<p>Un martini clásico con un toque de elegancia y misterio, inspirado en el icónico gángster.</p>
-									<p>Ingredientes: Vodka o ginebra, vermut seco, aceituna o cáscara de limón para decorar.</p>
-								</li>
-								<li>
-									<h3>"Sangre de Sicilia"</h3>
-									<p>Un cóctel intenso y profundo que combina sabores de frutas rojas con un toque de licor de naranja.</p>
-									<p>Ingredientes: Licor de naranja, jugo de arándanos, jugo de granada, vodka.</p>
-								</li>
-								<li>
-									<h3>"Negocios Sucios de Espresso"</h3>
-									<p>Una bebida audaz que combina el poder del espresso con la suavidad del licor de café y la crema batida.</p>
-									<p>Ingredientes: Espresso, vodka o licor de café, crema batida.</p>
-								</li>
-								<li>
-									<h3>"Mojito de Mafioso"</h3>
-									<p>Una versión única del clásico mojito con un toque de limoncello y hierbabuena.</p>
-									<p>Ingredientes: Ron blanco, limoncello, hojas de hierbabuena, azúcar, limón, soda.</p>
-								</li>
-							</ul>
-                    `;
-        } else if (category === 'Vinos') {
-          menuContent = `
-                        
-							<h2>Postres</h2>
-							<ul>
-								<li>
-									<h3>"Chianti del Don"</h3>
-            Un vino audaz y robusto que se sirve mejor con una buena pasta y una historia de intrigas.
-        
-								</li>
-								<li>
-									<h3>"Barolo al Rescate"</h3>
-            Un vino que rescata tus sentidos con su complejidad y cuerpo lleno, como si fuera un capo italiano en una misión.
-        
-								</li>
-								<li>
-									<h3>"Lambrusco Luciano"</h3>
-            Un vino burbujeante y alegre, perfecto para celebrar momentos felices en la vida de un mafioso llamado Luciano.
-        
-								</li>
-								<li>
-									<h3>"Sangiovese La Sonrisa"</h3>
-            Un vino con un toque de acidez que evoca una sonrisa en cada sorbo, incluso en medio de las disputas de la mafia.
-        
-								</li>
-								<li>
-									<h3>"Prosecco el Padrino"</h3>
-            Un vino espumoso que es el "padrino" de todas las celebraciones, brindando por alianzas y lealtades.
-        
-								</li>
-								<li>
-									<h3>"Vino Vendetta"</h3>
-            Un vino tinto intenso que promete vengar cualquier paladar insatisfecho con su sabor y carácter audaz.
-        
-								</li>
-								<li>
-									<h3>"Nebbiolo el Necesario"</h3>
-            Un vino que se convierte en una necesidad en cualquier mesa, igual que un "necesario" en el mundo de la mafia.
-        
-								</li>
-								<li>
-									<h3>"Riserva Racket"</h3>
-            Un vino de reserva con un sabor tan contundente que podría silenciar incluso los ruidos de un racket mafioso.
-        
-								</li>
-								<li>
-									<h3>"Montepulciano El Mafioso"</h3>
-            Un vino con carácter audaz y notas intensas, digno de ser saboreado por un auténtico mafioso italiano.
-        
-								</li>
-								<li>
-									<h3>"Gavi Gangster"</h3>
-            Un vino fresco y elegante que te hace sentir como un verdadero gangster italiano en el apogeo de su imperio.
-        
-								</li>
-                    `;
-        }
-        menuSection.innerHTML = menuContent;
-      }
-    </script>
+	<div class="menu-item" onclick="showMenu('entradas')">Entradas</div>
+	<div class="menu-item" onclick="showMenu('platos-principales')">Platos Principales</div>
+	<div class="menu-item" onclick="showMenu('postres')">Postres</div>
+	<div class="menu-item" onclick="showMenu('Bebidas y aperitivos')">Bebidas y Aperitivos</div>
+	<div class="menu-item" onclick="showMenu('Vinos')">Vinos</div>
+</nav>
+<section id="menu"></section>
+<div class="menuPrincipal"></div>
+<script>
+	function showMenu(category) {
+		const menuSection = document.getElementById('menu');
+		let menuContent = '';
+		document.getElementById('body').style.backgroundImage = "url('img/fondoMenu.jpg')";
+		if (category === 'entradas') {
+			menuContent = `
 
-	<a href="formulario.html">
-    <button>Hacer Reserva</button>
-    </a>
+			<h3>Entradas</h3>
+			*/agregar imagen aca y probar/***/*/*/*/*/*/*/*/
+			<ul>
+			<li>
+			<h3>"Fusilli al Capone"</h3>
+			<p>Fusilli cocidos al dente acompañados de una salsa de tomate picante, salchichas italianas y albóndigas sazonadas con hierbas frescas. Este plato rinde homenaje a la audacia y el sabor fuerte de Al Capone.</p>
+			</li>
+			<li>
+			<h3>"Rigatoni Gambino"</h3>
+			<p>Rigatoni al dente cubiertos con una cremosa y suave salsa de vodka, camarones salteados y un toque de pimienta roja. Este plato es un tributo a la elegancia y el poder de la familia Gambino.</p>
+			</li>
+			<li>
+			<h3>"Provolone Padrino"</h3>
+			<p>Una tabla de queso provolone derretido y gratinado, acompañado de crostini de ajo y tomates secados al sol. Un inicio audaz inspirado en el poder del padrino.</p>
+			</li>
+			<li>
+			<h3>"Antipasto Amici"</h3>
+			<p>Una selección de embutidos italianos, quesos, aceitunas y vegetales encurtidos, servidos con pan de focaccia. Una entrada compartida en honor a los amigos y socios de la mafia.</p>
+			</li>
+			<li>
+			<h3>"Insalata Mafiosa"</h3>
+			<p>Ensalada fresca con lechuga crujiente, tomates cherry, mozzarella y aceitunas negras, aliñada con vinagreta de hierbas. Una opción saludable que mantiene un perfil misterioso.</p>
+			</li>
+			</ul>
+			`;
+		} else if (category === 'platos-principales') {
+			menuContent = `
 
-	  
-  </body>
-  <footer>
-        <div class="icon">
-            <a href="https://aulavirtual.instituto.ort.edu.ar//">
-                <img src="img/ORT.png" alt="ORT">
-            </a>
-        </div>
-        <div class="icon">
-            <a href="https://www.youtube.com/watch?v=4dGOfFbzvq4&t=76s">
-                <img src="img/mafia.png" alt="mafia">
-            </a>
-        </div>
-    </footer>
+			<h3>Platos Principales</h3>
+			<ul>
+			<li>
+			<h3>"Espagueti Luciano"</h3>
+			<p>Espaguetis al dente servidos con una rica y fragante salsa marinara, hecha con tomates frescos y hierbas de la región italiana. Este plato refleja la tradición y el encanto de Lucky Luciano.</p>
+			</li>
+			<li>
+			<h3>"Gnocchi Omertà"</h3>
+			<p>Gnocchi suaves y tiernos bañados en una exquisita salsa de crema de trufa y champiñones. El nombre hace alusión al código de silencio de la mafia y a la elegancia de este plato.</p>
+			</li>
+			<li>
+			<h3>"Lasagna La Cosa Nostra"</h3>
+			<p> Una lasaña deliciosa con capas alternadas de carne molida sazonada, ricotta cremosa, espinacas frescas y láminas de pasta al huevo. Este plato representa la fortaleza y la unión de la Cosa Nostra.</p>
+			</li>
+			<li>
+			<h3>"Pizza Don Vito"</h3>
+			<p>Una pizza clásica con base de masa crujiente, cubierta generosamente con pepperoni picante, aceitunas negras y hojas frescas de albahaca. Esta pizza celebra el legado de Don Vito Corleone.</p>
+			</li>
+			<li>
+			<h3>"Pappardelle Godfather"</h3>
+			<p>Pappardelle anchos y tiernos servidos con una ragú de cordero lentamente cocido en vino tinto y hierbas aromáticas. Un tributo a la película "El Padrino".</p>
+			</li>
+			<li>
+			<h3>"Cotoletta Capo"</h3>
+			<p>Una jugosa cotoletta de ternera empanada y frita, acompañada de papas gajo y espinacas salteadas. Una elección audaz que rinde homenaje a los líderes de la mafia.</p>
+			</li>
+			<li>
+			<h3>"Risotto Venganza"</h3>
+			<p>Risotto cremoso de azafrán con camarones, calamares y mejillones en una salsa de mariscos. Un plato lujoso que evoca la búsqueda de venganza en el mundo de la mafia.</p>
+			</li>
+			</ul>              `;
+		} else if (category === 'postres') {
+			menuContent = `
+
+			<h3>Postres</h3>
+			<ul>
+			<li>
+			<h3>"Tiramisú Traficante"</h3>
+			<p>Un tiramisú indulgente impregnado de café fuerte y un toque de licor, cubierto con una capa de cacao en polvo. Este postre evoca la intensidad y la pasión de los traficantes de la mafia.</p>
+			</li>
+			<li>
+			<h3>"Cannoli Traición"</h3>
+			<p>Cannoli rellenos con una mezcla de crema de ricotta, chocolate blanco y pistachos, acompañados de un coulis de frambuesa. Un postre que refleja los giros inesperados en la vida de la mafia.</p>
+			</li>
+			<li>
+			<h3>"Affogato Vendetta"</h3>
+			<p>Helado de vainilla cubierto con un shot de espresso caliente y amaretto, coronado con virutas de chocolate oscuro. Un postre con un toque de determinación y desafío.</p>
+			</li>
+			<li>
+			<h3>"Zeppole Sospecha"</h3>
+			<p>Zeppole de masa frita espolvoreados con azúcar glasé, servidos con tres salsas misteriosas: chocolate, caramelo y frambuesa. Un postre que invita a la especulación y a la sorpresa.</p>
+			</li>
+			</ul>
+			`;
+		} else if (category === 'Bebidas y aperitivos') {
+			menuContent = `                       
+
+			<h3>Bebidas y Aperitivos:</h3>
+			<ul>
+			<li>
+			<h3>"Beso de Limoncello"</h3>
+			<p>Un cóctel refrescante y cítrico que combina el sabor brillante del limoncello con un toque de menta fresca.</p>
+			<p>Ingredientes: Limoncello, jugo de limón fresco, hojas de menta, soda.</p>
+			</li>
+			<li>
+			<h3>"Martini al Al Capone"</h3>
+			<p>Un martini clásico con un toque de elegancia y misterio, inspirado en el icónico gángster.</p>
+			<p>Ingredientes: Vodka o ginebra, vermut seco, aceituna o cáscara de limón para decorar.</p>
+			</li>
+			<li>
+			<h3>"Sangre de Sicilia"</h3>
+			<p>Un cóctel intenso y profundo que combina sabores de frutas rojas con un toque de licor de naranja.</p>
+			<p>Ingredientes: Licor de naranja, jugo de arándanos, jugo de granada, vodka.</p>
+			</li>
+			<li>
+			<h3>"Negocios Sucios de Espresso"</h3>
+			<p>Una bebida audaz que combina el poder del espresso con la suavidad del licor de café y la crema batida.</p>
+			<p>Ingredientes: Espresso, vodka o licor de café, crema batida.</p>
+			</li>
+			<li>
+			<h3>"Mojito de Mafioso"</h3>
+			<p>Una versión única del clásico mojito con un toque de limoncello y hierbabuena.</p>
+			<p>Ingredientes: Ron blanco, limoncello, hojas de hierbabuena, azúcar, limón, soda.</p>
+			</li>
+			</ul>
+			`;
+		} else if (category === 'Vinos') {
+			menuContent = `
+
+			<h3>Vinos</h3>
+			<ul>
+			<li>
+			<h3>"Chianti del Don"</h3>
+			Un vino audaz y robusto que se sirve mejor con una buena pasta y una historia de intrigas.
+
+			</li>
+			<li>
+			<h3>"Barolo al Rescate"</h3>
+			Un vino que rescata tus sentidos con su complejidad y cuerpo lleno, como si fuera un capo italiano en una misión.
+
+			</li>
+			<li>
+			<h3>"Lambrusco Luciano"</h3>
+			Un vino burbujeante y alegre, perfecto para celebrar momentos felices en la vida de un mafioso llamado Luciano.
+
+			</li>
+			<li>
+			<h3>"Sangiovese La Sonrisa"</h3>
+			Un vino con un toque de acidez que evoca una sonrisa en cada sorbo, incluso en medio de las disputas de la mafia.
+
+			</li>
+			<li>
+			<h3>"Prosecco el Padrino"</h3>
+			Un vino espumoso que es el "padrino" de todas las celebraciones, brindando por alianzas y lealtades.
+
+			</li>
+			<li>
+			<h3>"Vino Vendetta"</h3>
+			Un vino tinto intenso que promete vengar cualquier paladar insatisfecho con su sabor y carácter audaz.
+
+			</li>
+			<li>
+			<h3>"Nebbiolo el Necesario"</h3>
+			Un vino que se convierte en una necesidad en cualquier mesa, igual que un "necesario" en el mundo de la mafia.
+
+			</li>
+			<li>
+			<h3>"Riserva Racket"</h3>
+			Un vino de reserva con un sabor tan contundente que podría silenciar incluso los ruidos de un racket mafioso.
+
+			</li>
+			<li>
+			<h3>"Montepulciano El Mafioso"</h3>
+			Un vino con carácter audaz y notas intensas, digno de ser saboreado por un auténtico mafioso italiano.
+
+			</li>
+			<li>
+			<h3>"Gavi Gangster"</h3>
+			Un vino fresco y elegante que te hace sentir como un verdadero gangster italiano en el apogeo de su imperio.
+
+			</li>
+			`;
+		}
+		menuSection.innerHTML = menuContent;
+	}
+</script>
+</body>
+<footer>
+	<style>
+  footer {
+    font-family: Arial, sans-serif; 
+    font-size: 10px;
+  }
+</style>
+<a href="formulario.html">
+	<button>Para Hacer una reserva, Haz Click aqui!!!!</button>
+	</a>
+
+	<div class="footer-content">
+		<div class="footer-icons">
+			<div class="icon">
+				<a href="https://aulavirtual.instituto.ort.edu.ar//">
+					<img src="img/ORT.png" alt="ORT">
+				</a>
+			</div>
+			<div class="icon">
+				<a href="https://www.youtube.com/watch?v=4dGOfFbzvq4&t=76s">
+					<img src="img/mafia.png" alt="mafia">
+				</a>
+			</div>
+		</div>
+		<div class="contact-info">
+			<h4>Contacto</h4>
+			<p>Dirección: Sicilia 3124</p>
+			<p>Correo: Restaurante_LosSopranos@gmail.com</p>
+			<p>Teléfono: +54 911 12345678</p>
+		</div>
+	</div>
+	<div class="copyright">
+		<p>&copy; 2023 Los Soprano. Todos los derechos reservados. Diseño y desarrollo por El Padrino.</p>
+	</div>
+</footer>
 </html>
