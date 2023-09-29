@@ -16,6 +16,7 @@
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" pattern="[0-9]{2}-[0-9]{8}" required style="width: 575px; height: 10px;">
             <span id="telefonoError" style="color: red;"></span>
+            <span id="telefonoOk" style="color: #33ff00;"></span>
 
             <script>
                 const telefonoInput = document.getElementById("telefono");
@@ -26,10 +27,11 @@
                     const pattern = /^[0-9]{2}-[0-9]{8}$/;
 
                     if (!pattern.test(telefonoValue)) {
-                        telefonoError.textContent = "El teléfono debe seguir el formato XX-XXXXXXXX";
+                        telefonoError.textContent = "Formato admitido: 11-12345678";
                         telefonoInput.setCustomValidity("Formato de teléfono no válido");
                     } else {
                         telefonoError.textContent = "";
+                        telefonoOk.textContent = "Correcto!!!";
                         telefonoInput.setCustomValidity("");
                     }
                 });
