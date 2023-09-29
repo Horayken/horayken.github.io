@@ -14,9 +14,28 @@
             <input type="text" id="nombre" name="nombre" required style="width: 575px; height: 10px;">
             <br/>
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required style="width: 575px; height: 10px;">
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{2}-[0-9]{8}" required style="width: 575px; height: 10px;">  // 011-56067392
+            <span id="telefonoError" style="color: red;"></span>
+
+            <script>
+                const telefonoInput = document.getElementById("telefono");
+                const telefonoError = document.getElementById("telefonoError");
+
+                telefonoInput.addEventListener("input", function () {
+                    const telefonoValue = telefonoInput.value;
+                    const pattern = /^[0-9]{2}-[0-9]{8}$/;
+
+                    if (!pattern.test(telefonoValue)) {
+                        telefonoError.textContent = "El teléfono debe seguir el formato XX-XXXXXXXX";
+                        telefonoInput.setCustomValidity("Formato de teléfono no válido");
+                    } else {
+                        telefonoError.textContent = "";
+                        telefonoInput.setCustomValidity("");
+                    }
+                });
+            </script>
             <br>
-            <small>Formato admitido: 123-45-678</small><br><br>
+            <small>Formato admitido: 11-12345678</small><br><br>
             <br/>
             <label for="fecha">Fecha de reserva:</label>
             <input type="date" id="fecha" name="fecha" required style="width: 575px; height: 10px;">
