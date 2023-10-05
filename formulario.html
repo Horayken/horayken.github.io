@@ -29,6 +29,7 @@
                     if (!pattern.test(telefonoValue)) {
                         telefonoError.textContent = "Formato admitido: 11-12345678";
                         telefonoInput.setCustomValidity("Formato de teléfono no válido");
+                        telefonoOk.textContent = "";
                     } else {
                         telefonoError.textContent = "";
                         telefonoOk.textContent = "Correcto!!!";
